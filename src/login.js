@@ -10,7 +10,7 @@ const Login = ({ onLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/login", { email, password });
+      const response = await axios.post("http://localhost:3000/auth/login", { email, password });
   
       localStorage.setItem("authToken", response.data.token);
       localStorage.setItem("userId", response.data.userid);

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = "http://localhost:3000/api";
 
 // Minden kérésnél automatikusan hozzáadja az Authorization fejlécet
 axios.interceptors.request.use((config) => {
