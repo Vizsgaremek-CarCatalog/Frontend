@@ -11,7 +11,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("authToken"));
 
 
-   
+    
   return (
     <Router>
       <Routes>
