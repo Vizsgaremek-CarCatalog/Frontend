@@ -1,0 +1,38 @@
+/* Miami Vice-Inspired Theme */
+.miami-vice {
+  background-color: #121212 !important; /* Dark background */
+  color: #ff4f81 !important; /* Neon pink text */
+}
+
+.miami-vice .navbar-light {
+  background-color: #121212 !important; /* Dark navbar */
+}
+
+.miami-vice .navbar-light .navbar-nav .nav-link {
+  color: #ff4f81 !important; /* Neon pink links */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.miami-vice .navbar-light .navbar-nav .nav-link:hover {
+  color: #00b0ff !important; /* Neon blue hover effect */
+}
+
+.miami-vice .card {
+  background-color: #121212 !important; /* Dark card background */
+  color: #ff4f81 !important; /* Neon pink text */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+.miami-vice .btn-primary {
+  background-color: #ff4f81 !important; /* Neon pink button */
+  border-color: #ff4f81 !important;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded edges */
+  transition: background-color 0.3s ease;
+}
+
+.miami-vice .btn-primary:hover {
+  background-color: #00b0ff !important; /* Neon blue hover effect */
+  border-color: #00b0ff !important;
+}

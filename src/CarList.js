@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "./axiosConfig";  
 
-const CarList = () => {
+const CarList = ({ theme }) => {
   const [cars, setCars] = useState([]);
   const [error, setError] = useState(null);
 
@@ -15,23 +15,41 @@ const CarList = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Car List</h1>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <ul>
-        {cars.length > 0 ? (
-          cars.map((car) => (
-            <li key={car.id}>
-              {car.vehicle} - {car.type} ({car.manufacturer}) - {car.color} - {car.fuel}
-            </li>
-          ))
-        ) : (
-          <p>No cars found.</p>
-        )}
-      </ul>
+    <div className={`container mt-5 ${theme === "green-white" ? "bg-light" : "bg-dark text-white"}`}>
+      <h1 className="text-center mb-4">Car List</h1>
+      
+      {error && <p className="text-danger text-center">{error}</p>}
+      
+      {cars.length > 0 ? (
+        <div className="table-responsive">
+          <table className="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Vehicle</th>
+                <th>Type</th>
+                <th>Manufacturer</th>
+                <th>Color</th>
+                <th>Fuel</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cars.map((car) => (
+                <tr key={car.id}>
+                  <td>{car.vehicle}</td>
+                  <td>{car.type}</td>
+                  <td>{car.manufacturer}</td>
+                  <td>{car.color}</td>
+                  <td>{car.fuel}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p className="text-center">No cars found.</p>
+      )}
     </div>
   );
 };
 
 export default CarList;
-
